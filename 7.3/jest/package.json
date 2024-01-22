@@ -6,41 +6,54 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --collectCoverage"
-
   },
   "collectCoverage": {
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/vendor/**"
-  ],
- 
-  "coverageThreshold": {
-    "branches": 100,
-    "functions": 100,
-    "lines": 100
-  },
-  "keywords": [
-    "jest",
-    "test",
-    "jsaqa"
-  ],
-  "author": "PolinaKuznecova87",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^27.5.1"
+    ],
+    "coverageThreshold": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100
+    },
+    "keywords": [
+      "jest",
+      "test",
+      "jsaqa"
+    ],
+    "author": "PolinaKuznecova87",
+    "license": "ISC",
+    "devDependencies": {
+      "jest": "^27.5.1"
+    },
+    "directories": {
+      "test": "test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/PolinaKuznecova87/Jest-Playwright.git#main"
+    },
+    "bugs": {
+      "url": "https://github.com/PolinaKuznecova87/Jest-Playwright/issues"
+    },
+    "homepage": "https://github.com/PolinaKuznecova87/Jest-Playwright/tree/main#readme"
   },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PolinaKuznecova87/Jest-Playwright.git#main"
+    "url": "git+https://github.com/PolinaKuznecova87/Jest-Playwright.git"
   },
+  "author": "PolinaKuznecova87",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/PolinaKuznecova87/Jest-Playwright/issues"
   },
-  "homepage": "https://github.com/PolinaKuznecova87/Jest-Playwright/tree/main#readme"
+  "homepage": "https://github.com/PolinaKuznecova87/Jest-Playwright#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
-}
-

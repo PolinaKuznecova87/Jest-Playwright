@@ -17,4 +17,15 @@ describe("Books names test suit", () => {
   it("Function should throw TypeError when used without parameter", () => {
     expect(() => sorting.sortByName()).toThrow()
   })
+
+it("Without sorting", () => {
+  expect(
+    sorting.sortByName([
+      "Кавказ",
+      "Мастер и Маргарита",
+      "Кавказ",
+    ])
+  ).toEqual(["Кавказ", "Кавказ", "Мастер и Маргарита"]);
+});
+
 });

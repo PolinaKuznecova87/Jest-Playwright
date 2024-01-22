@@ -1,15 +1,26 @@
 {
   "name": "jsaqa_3_2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright"
+    "test": "playwright test"
   },
-  "author": "",
+  "author": "\"PolinaKuznecova\"",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "playwright": "^1.12.3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolinaKuznecova87/Jest-Playwright.git#main"
+  },
+  "bugs": {
+    "url": "https://github.com/PolinaKuznecova87/Jest-Playwright/issues"
+  },
+  "homepage": "https://github.com/PolinaKuznecova87/Jest-Playwright/tree/main#readme",
+  "description": ""
 }
