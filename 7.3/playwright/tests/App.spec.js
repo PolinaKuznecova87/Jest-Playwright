@@ -15,11 +15,11 @@ it("Successful authorization", async () => {
   });
   const page = await browser.newPage();
   await page.goto("https://netology.ru/?modal=sign_in");
-  await page.fill('[placeholder="Email"]', email);
-  await page.fill('[placeholder="Пароль"]', password);
+  await page('[placeholder="Email"]', email);
+  await page('[placeholder="Пароль"]', password);
   await page.click('[data-testid="login-submit-btn"]');
   await expect(page.locator("h2")).toContainText(["Моё обучение"]);
-  await browser.close();
+ 
 });
 test("Failed authorization", async () => {
   const browser = await chromium.launch({
@@ -29,12 +29,12 @@ test("Failed authorization", async () => {
   });
   const page = await browser.newPage();
   await page.goto("https://netology.ru/?modal=sign_in");
-  await page.fill('[placeholder="Email"]', incorrectEmail);
-  await page.fill('[placeholder="Пароль"]', incorrectPassport);
+  await page('[placeholder="Email"]', incorrectEmail);
+  await page('[placeholder="Пароль"]', incorrectPassport);
   await page.click('[data-testid="login-submit-btn"]');
   const error = await page.locator('[data-testid="login-error-hint"]');
   await expect(error).toHaveText("Вы ввели неправильно логин или пароль");
-  await browser.close();
+  
 });
 
 
