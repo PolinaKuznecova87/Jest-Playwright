@@ -6,14 +6,15 @@ const {
   incorrectEmail,
   incorrectPassport,
 } = require("../user");
-
-it("Successful authorization", async () => {
-  const browser = await chromium.launch({
+const browser = await chromium.launch({
     headless: false,
     slowMo: 5000,
     devtools: true
   });
   const page = await browser.newPage();
+
+it("Successful authorization", async () => {
+  
   await page.goto("https://netology.ru/?modal=sign_in");
   await page('[placeholder="Email"]', email);
   await page('[placeholder="Пароль"]', password);
@@ -22,12 +23,7 @@ it("Successful authorization", async () => {
  
 });
 test("Failed authorization", async () => {
-  const browser = await chromium.launch({
-    headless: false,
-    slowMo: 5000,
-    devtools: true
-  });
-  const page = await browser.newPage();
+  
   await page.goto("https://netology.ru/?modal=sign_in");
   await page('[placeholder="Email"]', incorrectEmail);
   await page('[placeholder="Пароль"]', incorrectPassport);
